@@ -1,43 +1,44 @@
 # 🛡️ SOC Analyst Portfolio
 
-Welcome to my Cybersecurity Portfolio.
+Welcome to my Cybersecurity Portfolio. This repository documents my journey as a SOC Analyst and contains hands-on projects, attack simulations, and detection engineering labs.
 
-This repository documents my journey as a SOC Analyst and contains hands-on projects in:
+## 🌟 Featured Project: Hybrid Cloud SOC & Detection Engineering Lab
 
-- 🔍 Threat Hunting
-- 📊 Splunk
-- 🛡️ Microsoft Sentinel
-- 🚨 Incident Response
-- 🎯 Detection Engineering
-- 📜 Sigma Rules
-- 🦠 Malware Analysis
-- 🧪 Home SOC Lab
-- 🗺️ MITRE ATT&CK Mapping
+**Objective:** Designed and built a comprehensive Hybrid Cloud Security Operations Center (SOC) environment to ingest telemetry, execute advanced adversary emulations, and develop high-fidelity detection rules.
 
-## Repository Structure
+**🛠️ Tech Stack & Tools:**
+- **SIEM:** Splunk Enterprise
+- **Telemetry:** Sysmon (Process Creation, Network Connections)
+- **Target Environment:** Windows 10 Virtual Machine
+- **Attack Infrastructure:** Kali Linux (GCP) & Atomic Red Team (ART)
+- **Networking:** Tailscale VPN
 
-```
-SOC-Analyst-Portfolio
-│
-├── Home-SOC-Lab
-├── Splunk
-├── Microsoft-Sentinel
-├── Incident-Response
-├── Threat-Hunting
-├── Detection-Engineering
-├── MITRE-ATTACK
-├── Sigma-Rules
-├── Malware-Analysis
-└── Reports
-```
-
-## Goals
-
-- Build a complete Home SOC Lab
-- Perform attack simulations
-- Detect attacks using Splunk
-- Investigate security incidents
-- Document findings professionally
+**🚀 Key Achievements:**
+- Optimized Splunk architecture and Universal Forwarder configs to achieve near real-time ingestion, eliminating system latency.
+- Developed and validated optimized SPL rules mapped to the MITRE ATT&CK framework for critical threats:
+  - **T1490:** Ransomware Shadow Copy Deletion
+  - **T1070:** Defense Evasion (Event Log Clearing)
+  - **T1136:** Persistence (Local Admin Escalation)
+  - **T1059 / T1105:** PowerShell LOLBins & C2 Connections
 
 ---
-⭐ This repository will be updated regularly as I complete new cybersecurity projects.
+
+## 🛠️ Core Competencies & Areas of Focus
+- 🔍 Threat Hunting
+- 📊 Splunk & Microsoft Sentinel
+- 🚨 Incident Response & Log Analysis
+- 🎯 Detection Engineering & Alert Optimization
+- 🗺️ MITRE ATT&CK Mapping
+
+## 📂 Repository Structure
+```text
+SOC-Analyst-Portfolio
+│
+├── 📁 Hybrid-Cloud-SOC-Lab       # (Current Active Project Files)
+│   ├── Detection_Engineering     # Optimized SPL queries & MITRE mappings
+│   ├── Dashboards                # XML source code for Splunk dashboards
+│   └── Architecture              # Network and data flow diagrams
+│
+├── 📁 Incident-Response
+├── 📁 Threat-Hunting
+└── 📁 Malware-Analysis
