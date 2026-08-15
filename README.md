@@ -25,8 +25,8 @@ Welcome to my Cybersecurity Portfolio. This repository documents my journey as a
 
 ## 🛠️ Core Competencies & Areas of Focus
 - 🔍 Threat Hunting
-- 📊 Splunk & Microsoft Sentinel
-- 🚨 Incident Response & Log Analysis
+- 📊 Splunk Enterprise & Log Analysis
+- 🚨 Incident Response
 - 🎯 Detection Engineering & Alert Optimization
 - 🗺️ MITRE ATT&CK Mapping
 
@@ -42,3 +42,12 @@ SOC-Analyst-Portfolio
 ├── 📁 Incident-Response
 ├── 📁 Threat-Hunting
 └── 📁 Malware-Analysis
+
+🎯 Future Goals
+Perform advanced adversary emulation using Kali Linux via GCP.
+
+Implement automated Incident Response playbooks.
+
+Expand detections with Sigma Rules and open-source tooling.
+
+⭐ Created and maintained by Teja — Aspiring SOC Analyst / Security Engineer. This repository will be updated regularly as I complete new cybersecurity phases.
