@@ -1,5 +1,6 @@
-index=sysmon EventCode=1
-| search Image="*powershell.exe"
-| search CommandLine="*ExecutionPolicy*Bypass*"
-| table _time host User ParentImage Image CommandLine
+index=sysmon EventCode=1 Image="*powershell.exe" CommandLine="*ExecutionPolicy*Bypass*"
+| eval Detection="PowerShell Execution Policy Bypass"
+| eval Severity="Medium"
+| eval MITRE="T1059.001 - PowerShell"
+| table _time host User ParentImage Image CommandLine Detection Severity MITRE
 | sort - _time
