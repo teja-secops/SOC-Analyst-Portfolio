@@ -11,4 +11,8 @@ Evidence for PS-002 should include:
 - Splunk returned 5 matching events during validation.
 - High-severity alert triggered successfully.
 
-> Screenshots should be added to this folder after checking that they do not expose sensitive credentials, tokens, license keys, or other private information.
+<img width="1358" height="634" alt="SPL query results" src="https://github.com/user-attachments/assets/6fc7c664-a7df-4865-89a2-c234eac6aa65" />
+
+
+<img width="1361" height="331" alt="Triggered alerts" src="https://github.com/user-attachments/assets/ee5a82ad-8072-428a-9b47-8eacf43eac58" />
+
