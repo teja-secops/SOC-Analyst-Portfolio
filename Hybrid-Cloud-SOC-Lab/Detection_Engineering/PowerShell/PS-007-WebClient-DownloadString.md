@@ -68,7 +68,9 @@ Administrative scripts, deployment tooling, update workflows, and automation may
 ## Evidence
 
 ### Splunk Detection Result
-Screenshot pending GitHub upload.
+<img width="1350" height="646" alt="SPL query results" src="https://github.com/user-attachments/assets/9f0975b4-0b0e-496b-80f5-877195fca900" />
+
 
 ### Triggered Alert
-Screenshot pending GitHub upload.
+<img width="1366" height="328" alt="Triggered alerts" src="https://github.com/user-attachments/assets/f5188f05-ee38-4aea-9c2d-5a28433c9dba" />
+
