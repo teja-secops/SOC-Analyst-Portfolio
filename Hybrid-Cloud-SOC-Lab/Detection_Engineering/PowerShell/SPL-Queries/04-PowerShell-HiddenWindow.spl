@@ -1,0 +1,6 @@
+index=sysmon EventCode=1 Image="*powershell.exe" CommandLine="*-WindowStyle Hidden*"
+| eval Detection="SOC - PowerShell Hidden Window"
+| eval Severity="Medium"
+| eval MITRE="T1564.003 - Hidden Window"
+| table _time host User ParentImage Image CommandLine Detection Severity MITRE
+| sort - _time
