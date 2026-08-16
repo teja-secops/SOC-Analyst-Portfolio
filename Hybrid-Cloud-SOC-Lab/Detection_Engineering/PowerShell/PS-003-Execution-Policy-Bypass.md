@@ -12,12 +12,16 @@ Detects PowerShell process creation where the command line contains `-ExecutionP
 
 ## SPL Query
 ```spl
-index=sysmon EventCode=1
-| search Image="*powershell.exe"
-| search CommandLine="*ExecutionPolicy*Bypass*"
-| table _time host User ParentImage Image CommandLine
+index=sysmon EventCode=1 Image="*powershell.exe" CommandLine="*ExecutionPolicy*Bypass*"
+| eval Detection="PowerShell Execution Policy Bypass"
+| eval Severity="Medium"
+| eval MITRE="T1059.001 - PowerShell"
+| table _time host User ParentImage Image CommandLine Detection Severity MITRE
 | sort - _time
 ```
+
+### Search Optimization
+For better search performance, the PowerShell image and command-line conditions are applied directly in the base search instead of retrieving a broader Sysmon Event ID 1 dataset and filtering it afterward. Detection name, severity, and MITRE ATT&CK mapping are also added to the result set to make analyst triage and portfolio validation clearer.
 
 ## Controlled Validation
 A harmless lab command was executed with `-ExecutionPolicy Bypass` and a unique test marker:
@@ -60,8 +64,10 @@ Legitimate software deployment, administrator scripts, and management tooling ma
 ## Validation Status
 **Tested and validated in the SOC home lab.**
 
+## Evidence
+
+### Splunk Detection Result
 <img width="1359" height="641" alt="SPL query results" src="https://github.com/user-attachments/assets/1b09d0fb-230f-42a8-ac1c-131a9fadfd76" />
 
+### Triggered Alert
 <img width="1366" height="322" alt="Triggered alerts" src="https://github.com/user-attachments/assets/45601a2e-7bb8-4f4c-ab91-af129dc9aece" />
-
-
