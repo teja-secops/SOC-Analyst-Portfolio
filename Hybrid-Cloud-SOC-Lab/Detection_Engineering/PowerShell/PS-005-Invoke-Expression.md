@@ -69,3 +69,8 @@ Screenshot pending GitHub upload.
 
 ### Triggered Alert
 Screenshot pending GitHub upload.
+
+<img width="1366" height="664" alt="SPL query results" src="https://github.com/user-attachments/assets/89fdbb3b-2e8f-417a-bdd3-48f5d568dcfa" />
+
+<img width="1366" height="330" alt="Triggered alerts" src="https://github.com/user-attachments/assets/6ef23643-e1c7-46d7-b767-026061909333" />
+
