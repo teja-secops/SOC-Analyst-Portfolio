@@ -134,5 +134,6 @@ During detection development, multiple frequent scheduled searches can create sc
 - [ ] Detection searches can run successfully
 
 ## Security Notes
+<img width="1365" height="662" alt="splunk dashboard" src="https://github.com/user-attachments/assets/d9d8b7ff-e385-4d97-adea-9f5b86aa25a8" />
 
 Never commit Splunk administrator passwords, authentication tokens, license files, or private deployment details to the public repository. Use placeholders such as `<SPLUNK_SERVER_IP>` in documentation.
