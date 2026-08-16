@@ -1,53 +1,107 @@
 # 🛡️ SOC Analyst Portfolio
 
-Welcome to my Cybersecurity Portfolio. This repository documents my journey as a SOC Analyst and contains hands-on projects, attack simulations, and detection engineering labs.
+This repository documents hands-on SOC operations, detection engineering, log analysis, alert validation, and security-lab engineering.
 
 ## 🌟 Featured Project: Hybrid Cloud SOC & Detection Engineering Lab
 
-**Objective:** Designed and built a comprehensive Hybrid Cloud Security Operations Center (SOC) environment to ingest telemetry, execute advanced adversary emulations, and develop high-fidelity detection rules.
+The project currently implements a working Windows-to-Splunk telemetry and detection pipeline and is being extended toward a hybrid-cloud controlled attack-simulation environment.
 
-**🛠️ Tech Stack & Tools:**
+### Current Implemented Stack
+
 - **SIEM:** Splunk Enterprise
-- **Telemetry:** Sysmon (Process Creation, Network Connections)
-- **Target Environment:** Windows 10 Virtual Machine
-- **Attack Infrastructure:** Kali Linux (GCP) & Atomic Red Team (ART)
-- **Networking:** Tailscale VPN
+- **Telemetry:** Sysmon
+- **Endpoint:** Windows 10 virtual machine
+- **Log Forwarding:** Splunk Universal Forwarder
+- **Transport:** TCP 9997
+- **Detection:** Optimized SPL searches with MITRE ATT&CK mapping
+- **Alerting:** Splunk scheduled alerts and Triggered Alerts
+- **Analysis:** SOC analyst dashboards and investigation searches
 
-**🚀 Key Achievements:**
-- Optimized Splunk architecture and Universal Forwarder configs to achieve near real-time ingestion, eliminating system latency.
-- Developed and validated optimized SPL rules mapped to the MITRE ATT&CK framework for critical threats:
-  - **T1490:** Ransomware Shadow Copy Deletion
-  - **T1070:** Defense Evasion (Event Log Clearing)
-  - **T1136:** Persistence (Local Admin Escalation)
-  - **T1059 / T1105:** PowerShell LOLBins & C2 Connections
+### Current Data Flow
 
----
+```text
+Windows 10 VM
+   -> Sysmon
+   -> Splunk Universal Forwarder
+   -> TCP 9997
+   -> Splunk Enterprise
+   -> Detection Searches
+   -> Alerts
+   -> SOC Analyst Dashboard
+```
 
-## 🛠️ Core Competencies & Areas of Focus
-- 🔍 Threat Hunting
-- 📊 Splunk Enterprise & Log Analysis
-- 🚨 Incident Response
-- 🎯 Detection Engineering & Alert Optimization
-- 🗺️ MITRE ATT&CK Mapping
+### Planned Hybrid-Cloud Extension
+
+```text
+Kali Linux (GCP)
+   -> Tailscale VPN
+   -> Windows 10 VM
+   -> Sysmon
+   -> Splunk Universal Forwarder
+   -> Splunk Enterprise
+   -> SOC Dashboard
+```
+
+The Kali Linux / GCP / Tailscale attack-simulation layer is listed as a planned phase until deployment and validation are complete.
+
+## 📚 Lab Documentation
+
+- [Hybrid Cloud SOC Lab](./Hybrid-Cloud-SOC-Lab/README.md)
+- [Architecture](./Hybrid-Cloud-SOC-Lab/Architecture.md)
+- [Setup Documentation](./Hybrid-Cloud-SOC-Lab/Setup/README.md)
+- [PowerShell Detection Engineering](./Hybrid-Cloud-SOC-Lab/Detection_Engineering/PowerShell/README.md)
+
+## 🔬 Detection Engineering
+
+The current PowerShell detection set includes validated detections for:
+
+- PowerShell execution baseline
+- Encoded commands
+- Execution Policy Bypass
+- Hidden PowerShell windows
+- Invoke-Expression
+- Invoke-WebRequest
+- WebClient / DownloadString activity
+
+Additional detections for event-log clearing, administrative-group persistence, shadow-copy deletion, and LOLBin network behavior are being validated as the next detection phase.
+
+## 🛠️ Core Competencies Demonstrated
+
+- Security monitoring and log analysis
+- Splunk Enterprise administration and SPL
+- Sysmon telemetry engineering
+- Detection engineering and tuning
+- MITRE ATT&CK mapping
+- Alert validation and investigation
+- Scheduler troubleshooting
+- SOC dashboard monitoring
+- Incident-response-oriented analysis
 
 ## 📂 Repository Structure
+
 ```text
-SOC-Analyst-Portfolio
-│
-├── 📁 Hybrid-Cloud-SOC-Lab       # (Current Active Project Files)
-│   ├── Detection_Engineering     # Optimized SPL queries & MITRE mappings
-│   ├── Dashboards                # XML source code for Splunk dashboards
-│   └── Architecture              # Network and data flow diagrams
-│
-├── 📁 Incident-Response
-├── 📁 Threat-Hunting
-└── 📁 Malware-Analysis
+SOC-Analyst-Portfolio/
+|
+├── Hybrid-Cloud-SOC-Lab/
+│   ├── README.md
+│   ├── Architecture.md
+│   ├── Setup/
+│   └── Detection_Engineering/
+|
+├── Incident-Response/
+├── Threat-Hunting/
+└── Malware-Analysis/
+```
 
-🎯 Future Goals
-Perform advanced adversary emulation using Kali Linux via GCP.
+## 🎯 Next Project Phases
 
-Implement automated Incident Response playbooks.
+- Complete the remaining endpoint and LOLBin detections
+- Deploy Kali Linux in GCP
+- Connect the simulation environment using Tailscale
+- Perform controlled attack simulations
+- Expand incident-response and threat-hunting case studies
+- Add additional dashboard and troubleshooting documentation
 
-Expand detections with Sigma Rules and open-source tooling.
+> All attack activity documented in this repository is performed only in controlled lab environments for defensive security validation.
 
-⭐ Created and maintained by Teja — Aspiring SOC Analyst / Security Engineer. This repository will be updated regularly as I complete new cybersecurity phases.
+⭐ Maintained by Teja as a hands-on SOC and detection-engineering portfolio.
