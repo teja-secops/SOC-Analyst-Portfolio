@@ -1,3 +1,4 @@
+<img width="1366" height="344" alt="Triggered alerts" src="https://github.com/user-attachments/assets/3f7b5fbb-616f-4527-962e-4263fefc4866" />
 # PS-004 — PowerShell Hidden Window Detection
 
 ## Overview
@@ -71,3 +72,8 @@ Pending current validation screenshot.
 
 ### Triggered Alert
 Pending current scheduled-trigger screenshot.
+
+<img width="1366" height="344" alt="Triggered alerts" src="https://github.com/user-attachments/assets/695d55e0-ddb5-4cad-8349-5782c6e5b47b" />
+
+<img width="1366" height="646" alt="SPL query results" src="https://github.com/user-attachments/assets/72a7848d-08d7-4148-9e55-006daa0c0772" />
+
