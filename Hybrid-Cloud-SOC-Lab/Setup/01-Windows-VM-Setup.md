@@ -80,3 +80,6 @@ This VM is used for controlled security testing. Keep personal or production cre
 - [ ] Splunk Enterprise host is reachable
 - [ ] System time is correct
 - [ ] VM is ready for Sysmon installation
+
+<img width="1358" height="729" alt="orcale vm" src="https://github.com/user-attachments/assets/2e16f3d8-6e58-4087-80fe-bcec0221bff1" />
+
