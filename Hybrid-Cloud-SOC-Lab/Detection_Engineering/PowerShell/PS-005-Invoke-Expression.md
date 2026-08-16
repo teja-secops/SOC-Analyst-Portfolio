@@ -60,17 +60,16 @@ Legitimate automation and administrative scripts can use `Invoke-Expression`. Tr
 - Technique ID: **T1059.001**
 
 ## Validation Status
-**Tested and alert trigger confirmed in the SOC home lab.**
+**Tested and validated in the SOC home lab with both SPL detection and scheduled-alert evidence.**
 
 ## Evidence
 
 ### Splunk Detection Result
-Screenshot pending GitHub upload.
+The optimized SPL query successfully identified the controlled `Invoke-Expression` execution in Sysmon process-creation telemetry.
+
+<img width="1366" height="664" alt="PS-005 Splunk Invoke-Expression detection results" src="https://github.com/user-attachments/assets/89fdbb3b-2e8f-417a-bdd3-48f5d568dcfa" />
 
 ### Triggered Alert
-Screenshot pending GitHub upload.
+The corresponding `SOC - PowerShell Invoke-Expression` alert triggered successfully during validation.
 
-<img width="1366" height="664" alt="SPL query results" src="https://github.com/user-attachments/assets/89fdbb3b-2e8f-417a-bdd3-48f5d568dcfa" />
-
-<img width="1366" height="330" alt="Triggered alerts" src="https://github.com/user-attachments/assets/6ef23643-e1c7-46d7-b767-026061909333" />
-
+<img width="1366" height="330" alt="PS-005 Invoke-Expression triggered alert" src="https://github.com/user-attachments/assets/6ef23643-e1c7-46d7-b767-026061909333" />
