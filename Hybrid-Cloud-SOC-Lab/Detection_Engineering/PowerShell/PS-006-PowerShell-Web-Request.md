@@ -1,4 +1,3 @@
-
 # PS-006 — PowerShell Web Request Detection
 
 ## Overview
@@ -31,7 +30,7 @@ Validation flow:
 
 **Controlled PowerShell test → Sysmon Event ID 1 → Splunk ingestion → SPL match → Scheduled alert trigger**
 
-The SPL matched the expected activity and the alert was successfully validated in the SOC home lab.
+The SPL matched the expected activity and the corresponding alert triggered successfully during controlled lab validation.
 
 ## Alert Configuration
 - Alert: `SOC - PowerShell Web Request`
@@ -64,13 +63,16 @@ Administrative scripts, software deployment, update workflows, and automation ma
 `T1105 - Ingress Tool Transfer` should only be added when the observed activity actually represents transfer or retrieval of a file/tool, rather than every generic `Invoke-WebRequest` execution.
 
 ## Validation Status
-**Tested and alert trigger confirmed in the SOC home lab.**
+**Fully tested and validated in the SOC home lab with both SPL detection evidence and scheduled alert evidence.**
 
 ## Evidence
 
 ### Splunk Detection Result
-<img width="1355" height="650" alt="SPL query results" src="https://github.com/user-attachments/assets/a6756f09-710f-40eb-b4a8-0709add2724f" />
+The optimized SPL successfully identified the expected `Invoke-WebRequest` activity in Sysmon process-creation telemetry.
+
+<img width="1355" height="650" alt="PS-006 PowerShell Web Request SPL detection results" src="https://github.com/user-attachments/assets/a6756f09-710f-40eb-b4a8-0709add2724f" />
 
 ### Triggered Alert
-<img width="1366" height="356" alt="Triggered alerts" src="https://github.com/user-attachments/assets/9ea23fc0-eb73-4cd6-bbf8-a6a873d2bc7f" />
+The corresponding medium-severity scheduled alert triggered successfully during validation.
 
+<img width="1366" height="356" alt="PS-006 PowerShell Web Request triggered alert" src="https://github.com/user-attachments/assets/9ea23fc0-eb73-4cd6-bbf8-a6a873d2bc7f" />
