@@ -1,5 +1,6 @@
-index=sysmon EventCode=1
-| search Image="*powershell.exe"
-| search CommandLine="*-EncodedCommand*" OR CommandLine="*-enc*"
-| table _time host User ParentImage Image CommandLine
+index=sysmon EventCode=1 Image="*powershell.exe" (CommandLine="*-EncodedCommand*" OR CommandLine="*-enc*")
+| eval Detection="PowerShell Encoded Command"
+| eval Severity="High"
+| eval MITRE="T1059.001 - PowerShell"
+| table _time host User ParentImage Image CommandLine Detection Severity MITRE
 | sort - _time
