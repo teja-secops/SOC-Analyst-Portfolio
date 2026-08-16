@@ -1,4 +1,3 @@
-<img width="1366" height="344" alt="Triggered alerts" src="https://github.com/user-attachments/assets/3f7b5fbb-616f-4527-962e-4263fefc4866" />
 # PS-004 — PowerShell Hidden Window Detection
 
 ## Overview
@@ -25,7 +24,7 @@ index=sysmon EventCode=1 Image="*powershell.exe" CommandLine="*-WindowStyle Hidd
 The PowerShell image and hidden-window command-line condition are applied directly in the base search to reduce unnecessary post-filtering. Detection name, severity, and MITRE ATT&CK mapping are added to the result set for faster analyst triage.
 
 ## Controlled Validation
-A harmless lab command is used to generate the expected process-creation telemetry:
+A harmless lab command was used to generate the expected process-creation telemetry:
 
 ```cmd
 powershell.exe -NoProfile -WindowStyle Hidden -Command "Write-Output 'SOC-LAB-PS004-HIDDEN-TEST'"
@@ -44,7 +43,7 @@ Validation flow:
 - Validation schedule: Every 5 minutes (`*/5 * * * *`)
 - Validation time range: Last 5 minutes
 
-The short schedule is used only during controlled validation to avoid waiting for an hourly run. After validation, the schedule should be reduced or staggered to limit scheduler contention and duplicate alerting.
+The short schedule was used only during controlled validation to avoid waiting for an hourly run. After validation, the alert schedule should be reduced or staggered to limit scheduler contention and duplicate alerting.
 
 ## Investigation Workflow
 1. Identify the host and user executing PowerShell.
@@ -63,17 +62,16 @@ Legitimate software deployment, login scripts, automation, and management tools 
 - Technique ID: **T1564.003**
 
 ## Validation Status
-**SPL and alert configuration documented. Current scheduled-alert evidence will be embedded after trigger confirmation.**
+**Tested and validated in the SOC home lab. SPL detection and scheduled alert trigger confirmed successfully.**
 
 ## Evidence
 
 ### Splunk Detection Result
-Pending current validation screenshot.
+The optimized SPL query successfully identified the controlled PowerShell hidden-window execution in Sysmon process-creation telemetry.
+
+<img width="1366" height="646" alt="PS-004 Splunk hidden window detection results" src="https://github.com/user-attachments/assets/72a7848d-08d7-4148-9e55-006daa0c0772" />
 
 ### Triggered Alert
-Pending current scheduled-trigger screenshot.
+The corresponding `SOC - PowerShell Hidden Window` scheduled alert triggered successfully during validation.
 
-<img width="1366" height="344" alt="Triggered alerts" src="https://github.com/user-attachments/assets/695d55e0-ddb5-4cad-8349-5782c6e5b47b" />
-
-<img width="1366" height="646" alt="SPL query results" src="https://github.com/user-attachments/assets/72a7848d-08d7-4148-9e55-006daa0c0772" />
-
+<img width="1366" height="344" alt="PS-004 scheduled triggered alert" src="https://github.com/user-attachments/assets/695d55e0-ddb5-4cad-8349-5782c6e5b47b" />
