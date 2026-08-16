@@ -1,0 +1,5 @@
+index=sysmon EventCode=1
+| search Image="*powershell.exe"
+| search CommandLine="*ExecutionPolicy*Bypass*"
+| table _time host User ParentImage Image CommandLine
+| sort - _time
