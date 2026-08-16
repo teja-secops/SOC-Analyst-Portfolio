@@ -24,7 +24,7 @@ The workflow used for each rule was:
 | PS-004 | Hidden Window | Medium | T1564.003 | Tested |
 | PS-005 | Invoke-Expression | Medium | T1059.001 | Tested |
 | PS-006 | PowerShell Web Request | Medium | T1059.001 | Tested |
-| PS-007 | WebClient / DownloadString | Medium | T1059.001 / T1105 | Tested |
+| PS-007 | WebClient / DownloadString | Medium | T1059.001 | Tested |
 
 ## Alerting Architecture
 
