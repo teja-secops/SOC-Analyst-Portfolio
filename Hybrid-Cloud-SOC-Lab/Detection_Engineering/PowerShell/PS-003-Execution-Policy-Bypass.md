@@ -60,4 +60,8 @@ Legitimate software deployment, administrator scripts, and management tooling ma
 ## Validation Status
 **Tested and validated in the SOC home lab.**
 
-Evidence captured during testing includes the Splunk search-result view and the corresponding scheduled triggered-alert view.
+<img width="1359" height="641" alt="SPL query results" src="https://github.com/user-attachments/assets/1b09d0fb-230f-42a8-ac1c-131a9fadfd76" />
+
+<img width="1366" height="322" alt="Triggered alerts" src="https://github.com/user-attachments/assets/45601a2e-7bb8-4f4c-ab91-af129dc9aece" />
+
+
