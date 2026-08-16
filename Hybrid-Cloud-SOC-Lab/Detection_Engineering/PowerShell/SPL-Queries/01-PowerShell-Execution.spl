@@ -1,2 +1,6 @@
 index=sysmon EventCode=1 Image="*powershell.exe"
-| fields _time host User Image CommandLine ParentImage
+| eval Detection="PowerShell Execution"
+| eval Severity="Low"
+| eval MITRE="T1059.001 - PowerShell"
+| table _time host User ParentImage Image CommandLine Detection Severity MITRE
+| sort - _time
