@@ -157,3 +157,5 @@ This avoids changing multiple components at the same time and makes troubleshoot
 - [ ] Event ID 1 searchable
 - [ ] Event ID 3 searchable when enabled
 - [ ] Detection fields are populated
+
+<img width="1366" height="646" alt="Logs ingections" src="https://github.com/user-attachments/assets/41180783-8dd3-435a-8bfd-dcde6b89a6eb" />
