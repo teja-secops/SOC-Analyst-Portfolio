@@ -1,0 +1,6 @@
+index=sysmon EventCode=1 Image="*powershell.exe" CommandLine="*Invoke-WebRequest*"
+| eval Detection="SOC - PowerShell Web Request"
+| eval Severity="Medium"
+| eval MITRE="T1059.001 - PowerShell"
+| table _time host User ParentImage Image CommandLine Detection Severity MITRE
+| sort - _time
