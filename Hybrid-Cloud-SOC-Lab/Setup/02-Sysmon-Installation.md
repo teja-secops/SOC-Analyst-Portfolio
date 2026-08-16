@@ -89,5 +89,6 @@ Sysmon Event ID 3 can be noisy. In a larger environment it should be filtered an
 - [ ] Endpoint is ready for Universal Forwarder onboarding
 
 ## Security Note
+<img width="1365" height="731" alt="sysmon" src="https://github.com/user-attachments/assets/652b447f-1c05-43cd-81eb-12ab6bc6b972" />
 
 Do not publish any configuration containing environment-specific secrets. Sysmon configuration files normally contain detection filters rather than credentials, but they should still be reviewed before being committed publicly.
