@@ -63,14 +63,16 @@ Administrative scripts, deployment tooling, update workflows, and automation may
 `T1105 - Ingress Tool Transfer` should only be added when the observed behavior clearly represents transfer or retrieval of a file/tool. A generic `DownloadString` request by itself is not enough to claim T1105.
 
 ## Validation Status
-**Tested and alert trigger confirmed in the SOC home lab.**
+**Fully tested and validated in the SOC home lab with both SPL detection evidence and a successful scheduled alert trigger.**
 
 ## Evidence
 
 ### Splunk Detection Result
-<img width="1350" height="646" alt="SPL query results" src="https://github.com/user-attachments/assets/9f0975b4-0b0e-496b-80f5-877195fca900" />
+The optimized SPL successfully identified the WebClient / DownloadString PowerShell activity in Sysmon process-creation telemetry.
 
+<img width="1350" height="646" alt="PS-007 WebClient DownloadString Splunk detection results" src="https://github.com/user-attachments/assets/9f0975b4-0b0e-496b-80f5-877195fca900" />
 
 ### Triggered Alert
-<img width="1366" height="328" alt="Triggered alerts" src="https://github.com/user-attachments/assets/f5188f05-ee38-4aea-9c2d-5a28433c9dba" />
+The corresponding medium-severity scheduled alert triggered successfully during controlled validation.
 
+<img width="1366" height="328" alt="PS-007 WebClient DownloadString triggered alert" src="https://github.com/user-attachments/assets/f5188f05-ee38-4aea-9c2d-5a28433c9dba" />
