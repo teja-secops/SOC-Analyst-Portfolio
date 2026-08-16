@@ -142,5 +142,9 @@ The lab forwarder was run under the Local System account so it could reliably re
 - [ ] Events begin appearing in `index=sysmon`
 
 ## Security Note
+<img width="1366" height="400" alt="splunk forwoder" src="https://github.com/user-attachments/assets/af78052b-5147-4009-b3ed-a7138c53d869" />
+
+<img width="1365" height="539" alt="UF splunk running" src="https://github.com/user-attachments/assets/0c2273f0-6c33-4d2c-9354-6763131f3bc0" />
+
 
 Never commit passwords, deployment-server secrets, certificates, tokens, or environment-specific credentials to GitHub.
