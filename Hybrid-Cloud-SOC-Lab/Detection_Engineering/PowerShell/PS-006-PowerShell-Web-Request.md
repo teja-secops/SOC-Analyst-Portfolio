@@ -1,3 +1,4 @@
+
 # PS-006 — PowerShell Web Request Detection
 
 ## Overview
@@ -68,7 +69,8 @@ Administrative scripts, software deployment, update workflows, and automation ma
 ## Evidence
 
 ### Splunk Detection Result
-Screenshot pending GitHub upload.
+<img width="1355" height="650" alt="SPL query results" src="https://github.com/user-attachments/assets/a6756f09-710f-40eb-b4a8-0709add2724f" />
 
 ### Triggered Alert
-Screenshot pending GitHub upload.
+<img width="1366" height="356" alt="Triggered alerts" src="https://github.com/user-attachments/assets/9ea23fc0-eb73-4cd6-bbf8-a6a873d2bc7f" />
+
