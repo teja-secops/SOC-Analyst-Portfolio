@@ -12,12 +12,16 @@ Detects PowerShell process creation containing `-EncodedCommand` or the abbrevia
 
 ## SPL Query
 ```spl
-index=sysmon EventCode=1
-| search Image="*powershell.exe"
-| search CommandLine="*-EncodedCommand*" OR CommandLine="*-enc*"
-| table _time host User ParentImage Image CommandLine
+index=sysmon EventCode=1 Image="*powershell.exe" (CommandLine="*-EncodedCommand*" OR CommandLine="*-enc*")
+| eval Detection="PowerShell Encoded Command"
+| eval Severity="High"
+| eval MITRE="T1059.001 - PowerShell"
+| table _time host User ParentImage Image CommandLine Detection Severity MITRE
 | sort - _time
 ```
+
+### Search Optimization
+For better search performance, the PowerShell image and encoded-command conditions are applied directly in the base search instead of retrieving a broader Sysmon Event ID 1 dataset and post-filtering it. Detection name, severity, and MITRE ATT&CK mapping are added to the result set for faster analyst triage.
 
 ## Controlled Validation
 A harmless encoded PowerShell command was executed in the lab to validate the detection path.
