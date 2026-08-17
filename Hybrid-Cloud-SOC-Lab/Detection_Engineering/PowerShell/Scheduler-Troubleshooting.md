@@ -164,3 +164,6 @@ This troubleshooting exercise demonstrates a practical SOC engineering workflow:
 ## Analyst Takeaway
 
 A red scheduler-health indicator does not automatically mean the SPL itself is expensive. Scheduler lag can also be caused by scheduling design, missed execution periods, resource contention, and host availability. Internal Splunk scheduler telemetry should be reviewed before increasing concurrency or system limits.
+
+<img width="1272" height="605" alt="schulder troule" src="https://github.com/user-attachments/assets/61a4f450-7e1e-4a0a-b3dc-853dc5a7ec61" />
+
